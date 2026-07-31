@@ -137,6 +137,11 @@ Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make
       "input_modalities": ["text"],
       "supports_search_tool": false,
       "use_responses_lite": false,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "experimental_supported_tools": [],
       "tool_mode": null,
       "multi_agent_version": null
     }
