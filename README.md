@@ -118,29 +118,32 @@ Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make
 ```json
 {
   "models": [
-    {
-      "slug": "gpt://<folder-id>/deepseek-v4-flash/latest",
-      "display_name": "DeepSeek V4 Flash",
-      "shell_type": "default",
-      "visibility": "list",
-      "supported_in_api": true,
-      "priority": 30,
-      "base_instructions": "You are Codex, a coding agent.",
-      "supports_reasoning_summaries": true,
-      "default_reasoning_summary": "auto",
-      "support_verbosity": false,
-      "supported_reasoning_levels": [],
-      "supports_parallel_tool_calls": true,
-      "context_window": 1000000,
-      "max_context_window": 1000000,
-      "effective_context_window_percent": 90,
-      "input_modalities": ["text"],
-      "supports_search_tool": false,
-      "use_responses_lite": false,
-      "tool_mode": null,
-      "multi_agent_version": null,
-      "truncation_policy": {"mode": "bytes", "limit": 10000}
-    }
+   {
+        "slug": "gpt://<folder_id>/deepseek-v4-flash/latest",
+        "display_name": "DeepSeek V4 Flash",
+        "shell_type": "default",
+        "visibility": "list",
+        "supported_in_api": true,
+        "priority": 30,
+        "base_instructions": "You are Codex, a coding agent.",
+        "supports_reasoning_summaries": true,
+        "default_reasoning_summary": "auto",
+        "support_verbosity": false,
+        "supported_reasoning_levels": [],
+        "apply_patch_tool_type": null,
+        "web_search_tool_type": "text",
+        "truncation_policy": { "mode": "bytes", "limit": 10000 },
+        "supports_parallel_tool_calls": true,
+        "experimental_supported_tools": [],
+        "context_window": 1000000,
+        "max_context_window": 1000000,
+        "effective_context_window_percent": 90,
+        "input_modalities": ["text"],
+        "supports_search_tool": false,
+        "use_responses_lite": false,
+        "tool_mode": null,
+        "multi_agent_version": null
+      }
   ]
 }
 ```
