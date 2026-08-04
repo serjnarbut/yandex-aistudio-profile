@@ -138,7 +138,8 @@ Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make
       "supports_search_tool": false,
       "use_responses_lite": false,
       "tool_mode": null,
-      "multi_agent_version": null
+      "multi_agent_version": null,
+      "truncation_policy": {"mode": "bytes", "limit": 10000}
     }
   ]
 }
