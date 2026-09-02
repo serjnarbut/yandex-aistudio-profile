@@ -37,11 +37,6 @@ model_reasoning_summary = "auto"
 
 web_search = "live"
 
-developer_instructions = """
-Do NOT use the apply_patch tool — it is not available in this environment.
-Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make changes.
-"""
-
 [tools.web_search]
 context_size = "medium"
 allowed_domains = ["aistudio.yandex.ru", "https://github.com/yandex-cloud/mcp", "https://yandex.cloud/ru/docs"]
@@ -98,17 +93,6 @@ model_reasoning_summary = "auto"
 |`model_reasoning_effort`|**да**|Уровень. Для DeepSeek: `"medium"` или `"high"`. **`"none"` отключает reasoning**|
 |`model_reasoning_summary`|нет|`"auto"`|
 
-### `developer_instructions` — отключение apply_patch
-
-Некоторые провайдеры/окружения не поддерживают `apply_patch`. В таких случаях
-инструкция запрещает Codex использовать этот инструмент:
-
-```toml
-developer_instructions = """
-Do NOT use the apply_patch tool — it is not available in this environment.
-Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make changes.
-"""
-```
 
 ### `model_catalog_json` — описание модели
 
@@ -130,7 +114,7 @@ Use shell commands (cat, sed, cp, tee, heredocs) or write files directly to make
         "default_reasoning_summary": "auto",
         "support_verbosity": false,
         "supported_reasoning_levels": [],
-        "apply_patch_tool_type": null,
+        "apply_patch_tool_type": "freeform",
         "web_search_tool_type": "text",
         "truncation_policy": { "mode": "bytes", "limit": 10000 },
         "supports_parallel_tool_calls": true,
